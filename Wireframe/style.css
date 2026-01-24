@@ -36,6 +36,8 @@ a {
   border: var(--line);
   max-width: fit-content;
 }
+
+h1 { text-align: center; }
 img,
 svg {
   width: 100%;
@@ -86,4 +88,6 @@ article {
   > img {
     grid-column: span 3;
   }
+}
+#image1{ width: 100%; height: 400px;
 }

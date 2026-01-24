@@ -1,23 +1,8 @@
-/* Here are some starter styles
-You can edit these or replace them entirely 
-It's showing you a common way to organise CSS 
-And includes solutions to common problems 
-As well as useful links to learn more */
 
-/* ====== Design Palette ======
- This is our "design palette".
- It sets out the colours, fonts, styles etc to be used in this design 
- At work, a designer will give these to you based on the corporate brand, but while you are learning
- You can design it yourself if you like
- Inspect the starter design with Devtools
- Click on the colour swatches to see what is happening
- I've put some useful CSS you won't have learned yet
- For you to explore and play with if you are interested
- https://web.dev/articles/min-max-clamp
- https://scrimba.com/learn-css-variables-c026
 ====== Design Palette ====== */
 :root {
   --paper: oklch(7 0 0);
+  --color: #000;
   --ink: color-mix(in oklab, var(--color) 5%, black);
   --font: 100%/1.5 system-ui;
   --space: clamp(6px, 6px + 2vw, 15px);
@@ -27,17 +12,23 @@ As well as useful links to learn more */
 /* ====== Base Elements ======
  General rules for basic HTML elements in any context */
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font: var(--font);
+  background-color: e5fffd;
+  color: #333;
 }
+
 a {
   padding: var(--space);
   border: var(--line);
   max-width: fit-content;
 }
 
-h1 { text-align: center; }
+h1 { text-align: center;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    font-weight: bold;
+
+}
 img,
 svg {
   width: 100%;
@@ -45,49 +36,87 @@ svg {
 }
 /* ====== Site Layout ====== 
 Setting the overall rules for page regions
-https://www.w3.org/WAI/tutorials/page-structure/regions/
 */
 main {
   max-width: var(--container);
   margin: 0 auto calc(var(--space) * 4) auto;
+  padding-bottom: 60px;
 }
 footer {
   position: fixed;
   bottom: 0;
+  width: 100%;
+  height: 60px;
   text-align: center;
 }
 /* ====== Articles Grid Layout ====
-Setting the rules for how articles are placed in the main element.
-Inspect this in Devtools and click the "grid" button in the Elements view
-Play with the options that come up.
-https://developer.chrome.com/docs/devtools/css/grid
-https://gridbyexample.com/learn/
+Makes sure the first article goes the full width of the page and the image 2 and image 3 are next to each other
 */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space);
+  gap: 20px;
   > *:first-child {
-    grid-column: span 2;
+  grid-column: span 2;
+  padding-bottom: 15px;
+}
+
   }
 }
 /* ====== Article Layout ====== 
 Setting the rules for how elements are placed in the article. 
-Now laying out just the INSIDE of the repeated card/article design.
-Keeping things orderly and separate is the key to good, simple CSS.
+so text is centred under the first image and left-aligned on images 2 and 3
 */
-article {
-  border: var(--line);
-  padding-bottom: var(--space);
+.article1 {
+  text-align: center;
+  }
+
+.article2 {
   text-align: left;
-  display: grid;
-  grid-template-columns: var(--space) 1fr var(--space);
-  > * {
-    grid-column: 2/3;
-  }
-  > img {
-    grid-column: span 3;
-  }
 }
-#image1{ width: 100%; height: 400px;
+
+.article3 {
+  text-align: left;
 }
+
+/* ====== makes sure image 1 fills the full width of the page ======*/
+
+#image1 { width: 100%; 
+height: 400px;
+}
+
+figcaption {
+  text-align: center;   /* Centers the caption text */
+  font-style: italic;   /* Optional: makes it look like a caption */
+  margin-top: 8px;      /* Space between image and caption */
+  color: var(--ink);    /* Keeps it consistent with your text color */
+  font-size: 0.9rem;    /* Slightly smaller than body text */
+}
+
+
+/* ====== Buttons  Layout ====== 
+this makes the more information links look like buttons
+*/
+
+article a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: hsl(226, 61%, 41%); /* green button */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+article a:hover {
+  background-color: e7fff3
+  color: e5fffd;
+}
+
+a:focus {
+  outline: 3px solid lch(87.22% 82.42 151.58 / 0.327);
+  outline-offset: 2px;
+}
+
+
+
+

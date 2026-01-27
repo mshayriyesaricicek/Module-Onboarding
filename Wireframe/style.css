@@ -1,9 +1,9 @@
 
-====== Design Palette ====== */
+/*====== Design Palette ====== */
 :root {
-  --paper: oklch(7 0 0);
+  --paper: #ffffff;
   --color: #000;
-  --ink: color-mix(in oklab, var(--color) 5%, black);
+  --ink: #333; 
   --font: 100%/1.5 system-ui;
   --space: clamp(6px, 6px + 2vw, 15px);
   --line: 1px solid;
@@ -12,43 +12,19 @@
 /* ====== Base Elements ======
  General rules for basic HTML elements in any context */
 body {
-  background-color: e5fffd;
+  background-color: #e5fffd;
   color: #333;
 }
 
-a {
-  padding: var(--space);
-  border: var(--line);
-  max-width: fit-content;
-}
+/* ===== main heading ======*/
 
 h1 { text-align: center;
     font-size: 3rem;
     letter-spacing: 2px;
     margin: 20px 0;
     font-weight: bold;
+}
 
-}
-img,
-svg {
-  width: 100%;
-  object-fit: cover;
-}
-/* ====== Site Layout ====== 
-Setting the overall rules for page regions
-*/
-main {
-  max-width: var(--container);
-  margin: 0 auto calc(var(--space) * 4) auto;
-  padding-bottom: 60px;
-}
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  text-align: center;
-}
 /* ====== Articles Grid Layout ====
 Makes sure the first article goes the full width of the page and the image 2 and image 3 are next to each other
 */
@@ -56,34 +32,36 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  > *:first-child {
-  grid-column: span 2;
   padding-bottom: 15px;
 }
 
-  }
-}
+  
 /* ====== Article Layout ====== 
 Setting the rules for how elements are placed in the article. 
 so text is centred under the first image and left-aligned on images 2 and 3
 */
-.article1 {
+
+/* Make the first article span both columns */
+main article:first-child {
+  grid-column: span 2; /* spans full width */
   text-align: center;
+}
+.article {
+  text-align: left;
   }
 
-.article2 {
-  text-align: left;
+
+
+/* ====== Styling for images ====== */
+
+.article-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 
-.article3 {
-  text-align: left;
-}
 
-/* ====== makes sure image 1 fills the full width of the page ======*/
-
-#image1 { width: 100%; 
-height: 400px;
-}
+/* ====== Styling for captions for figures ====== */
 
 figcaption {
   text-align: center;   /* Centers the caption text */
@@ -94,8 +72,7 @@ figcaption {
 }
 
 
-/* ====== Buttons  Layout ====== 
-this makes the more information links look like buttons
+/* ====== Buttons  Layout ====== this makes the more information links look like buttons
 */
 
 article a {
@@ -108,15 +85,22 @@ article a {
 }
 
 article a:hover {
-  background-color: e7fff3
-  color: e5fffd;
+  background-color: #e7fff3;
+  color: #e5fffd;
 }
 
 a:focus {
-  outline: 3px solid lch(87.22% 82.42 151.58 / 0.327);
+  outline: 3px solid rgba(0, 150, 100, 0.3);
   outline-offset: 2px;
 }
+/* ====== Footer  Layout ====== */
 
-
-
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+  margin: 0;
+  grid-column: span 2;
+}
 

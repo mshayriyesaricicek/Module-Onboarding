@@ -9,19 +9,45 @@
   </head>
   <body>
     <header>
-      <h1>Product Pick</h1>
+      <h1>Amazing T-shirts</h1>
     </header>
     <main>
       <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
+        <p><label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" autocomplete="on" minlength="2" autofocus> </p>
+        <p><label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" autocomplete="on" minlength="2" required></p>
+        <p><label for="email">Email:</label>
+          <input type="email" id="email" name="email" autocomplete="on"></p>
+
+       </select></p>
+          <p>T-Shirt Size:</p>
+          <p><input type="radio" id="XS" name="size" value="XS" required>
+            <label for="XS">Extra Small</label></p>
+          <p><input type="radio" id="S" name="size" value="S">
+            <label for="S">Small</label></p>
+          <p><input type="radio" id="M" name="size" value="M">
+            <label for="M">Medium</label></p>
+          <p><input type="radio" id="L" name="size" value="L">
+            <label for="L">Large</label></p>
+          <p><input type="radio" id="XL" name="size" value="XL">
+            <label for="XL">Extra Large</label></p>
+
+        </select></p>
+          <p>Color Preference:</p>
+          <p><input type="radio" id="red" name="color" value="red" required>
+            <label for="red">Red</label></p>
+          <p><input type="radio" id="blue" name="color" value="blue">
+            <label for="blue">Blue</label></p>
+          <p><input type="radio" id="black" name="color" value="black">
+            <label for="black">Black</label></p>
+
+        <button type ="submit">Submit</button>
       </form>
     </main>
     <footer>
       <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      <h2>By Hayriye Saricicek</h2>
     </footer>
   </body>
 </html>

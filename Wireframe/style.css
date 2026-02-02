@@ -14,23 +14,32 @@
 body {
   background-color: #e5fffd;
   color: #333;
-}
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+ }
 
 /* ===== main heading ======*/
 
-h1 { text-align: center;
-    font-size: 3rem;
-    letter-spacing: 2px;
-    margin: 20px 0 0 0
-    font-weight: bold;
+header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  
+  }
+
+h1 { 
+  font-size: 5rem;
+  letter-spacing: 2px;
+  margin: 20px 0 0 0;
+  font-weight: bold;
 }
 
-sub-header {
-  text-align: center;
+header p {
   font-size: 1.2rem;
   margin: 0 0px 0px 0px;
   color: var(--ink);
-}
+  }
 
 /* ====== Articles Grid Layout ====
 Makes sure the first article goes the full width of the page and the image 2 and image 3 are next to each other
@@ -42,8 +51,7 @@ main {
   padding-bottom: 15px;
 }
 
-  
-/* ====== Article Layout ====== 
+ /* ====== Article Layout ====== 
 Setting the rules for how elements are placed in the article. 
 so text is centred under the first image and left-aligned on images 2 and 3
 */
@@ -53,7 +61,7 @@ main article:first-child {
   grid-column: span 2; /* spans full width */
   text-align: left;
   border: var(--line);
-  padding: 30px 30px 30px 30px;
+  padding: 30px 30px 80px 30px;
 }
 .article {
   text-align: left;
@@ -61,9 +69,7 @@ main article:first-child {
    padding: 30px 30px 30px 30px;
   }
 
-
-
-/* ====== Styling for images ====== */
+  /* ====== Styling for images ====== */
 
 .article-image {
  display: block;
@@ -95,12 +101,12 @@ a:focus {
 }
 /* ====== Footer  Layout ====== */
 
-footer {
+footer { position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   text-align: center;
   padding: 20px 0;
-  box-sizing: border-box;
-  margin: 0;
-  grid-column: span 2;
+  background-color: #fff;
 }
 

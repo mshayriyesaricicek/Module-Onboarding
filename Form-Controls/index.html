@@ -14,39 +14,82 @@
     <main>
       <form>    
   <! -- User Personal Information Section -->
-        <p><label for="firstName">First Name:</label>
-          <input type="text" id="firstName" name="firstName" autocomplete="on" minlength="2" autofocus> </p>
-        <p><label for="lastName">Last Name:</label>
-          <input type="text" id="lastName" name="lastName" autocomplete="on" minlength="2" required></p>
-        <p><label for="email">Email:</label>
-          <input type="email" id="email" name="email" autocomplete="on"></p>
+        <div>
+          <p><label for="firstName">First Name:</label>
+          <input type="text" pattern="^[A-Za-z]{2,}$" id="firstName" name="firstName" autocomplete="on" minlength="2" autofocus> </p>
+          <p><label for="lastName">Last Name:</label>
+            <input type="text" pattern="^[A-Za-z]{2,}$" id="lastName" name="lastName" autocomplete="on" minlength="2" required></p>
+          <p><label for="email">Email:</label>
+            <input type="email" id="email" name="email" autocomplete="on"></p>
+        </div>
 
-       </select></p>
-          <p>T-Shirt Size:</p>
-          <p><input type="radio" id="XS" name="size" value="XS" required>
-            <label for="XS">Extra Small</label></p>
-          <p><input type="radio" id="S" name="size" value="S">
-            <label for="S">Small</label></p>
-          <p><input type="radio" id="M" name="size" value="M">
-            <label for="M">Medium</label></p>
-          <p><input type="radio" id="L" name="size" value="L">
-            <label for="L">Large</label></p>
-          <p><input type="radio" id="XL" name="size" value="XL">
-            <label for="XL">Extra Large</label></p>
-
-        </select></p>
-          <p>Color Preference:</p>
-          <p><input type="radio" id="red" name="color" value="red" required>
-            <label for="red">Red</label></p>
-          <p><input type="radio" id="blue" name="color" value="blue">
-            <label for="blue">Blue</label></p>
-          <p><input type="radio" id="black" name="color" value="black">
-            <label for="black">Black</label></p>
-  <! -- Submit Button -->
-        <button type ="submit">Submit</button>
+        <h2><strong>T-Shirt Size:</strong></h2>
+         <div>
+          <label>
+            <input type="radio" name="size" value="XS" required>
+            Extra Small
+          </label>
+          <br><br>
+        </div>
+        </div>
+          <label>
+            <input type="radio" name="size" value="S" required>
+            Small
+          </label>
+          <br><br>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="size" value="M" required>
+            Medium
+          </label>
+          <br><br>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="size" value="L" required>
+            Large
+          </label>
+          <br><br>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="size" value="XL" required>
+            Extra Large
+          </label>
+          <br><br>
+        </div>
+         
+        <h2><strong>Color Preference:</strong></h2>
+        <div>
+          <label>
+            <input type="radio" name="color" value="red" required>
+            Red
+          </label>
+          <br><br>
+        </div>
+        </div>
+          <label>
+            <input type="radio" name="color" value="blue" required>
+            Blue
+          </label>
+          <br><br>
+        </div>
+        <div>
+          <label>
+            <input type="radio" name="color" value="black" required>
+            Black
+          </label>
+          <br><br>
+        </div>
+          
+   <! -- Submit Button -->
+        <button type="submit">Submit</button>
+      
       </form>
     </main>
+    
     <footer>
-      <h2>By Hayriye Saricicek</h2>
+      <p>Contact: Hayriye Saricicek <a href="mailto:mshayriyesaricicek@gmail.com">mshayriyesaricicek@.com</a></p>
     </footer>  </body>
 </html>

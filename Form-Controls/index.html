@@ -16,11 +16,17 @@
   <! -- User Personal Information Section -->
         <div>
           <p><label for="firstName">First Name:</label>
-          <input type="text" pattern="^[A-Za-z]{2,}$" id="firstName" name="firstName" autocomplete="on" minlength="2" required autofocus > </p>
+            <input type="text" pattern="^[A-Za-z]{2,}$" id="firstName" 
+            name="firstName" autocomplete="on" minlength="2" required autofocus > </p>
           <p><label for="lastName">Last Name:</label>
-            <input type="text" pattern="^[A-Za-z]{2,}$" id="lastName" name="lastName" autocomplete="on" minlength="2" required></p>
+            <input type="text" pattern="^[A-Za-z]{2,}$" id="lastName" 
+            name="lastName" autocomplete="on" minlength="2" required></p>
           <p><label for="email">Email:</label>
-            <input type="email" id="email" name="email" autocomplete="on" required></p>
+            <input type="email" id="email" name="email" ``
+            autocomplete="on" required 
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            title="Please enter a valid email address (example: name@example.com)"></p>
+   
         </div>
 
         <h2><strong>T-Shirt Size:</strong></h2>
